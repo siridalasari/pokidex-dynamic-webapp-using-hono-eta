@@ -1,0 +1,12 @@
+#right-panel {
+  display: flex;
+  overflow-y: scroll;
+  column-gap: 2vw;
+  row-gap: 2vw;
+  flex-wrap: wrap;
+  width: 80vw;
+  box-sizing: border-box;
+  height: 100vh;
+  padding: 2vh 4vh;
+  background-color: rgb(255, 255, 255);
+}

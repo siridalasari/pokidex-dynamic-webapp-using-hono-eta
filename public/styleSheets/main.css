@@ -1,0 +1,17 @@
+@import url(style.css);
+@import url(colors.css);
+@import url(card.css);
+@import url(left_panel.css);
+@import url(right_panel.css);
+
+* {
+  border: 0px;
+  padding: 0px;
+}
+body {
+  font-family: system-ui;
+  background-color: aqua  x;
+}
+main{
+  display: flex;
+}
