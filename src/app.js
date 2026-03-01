@@ -9,7 +9,7 @@ export const createApp = (pokiData) => {
     c.set("pokiData", pokiData);
     await next();
   });
-  app.get("/", serveStatic({ root: "public" }));
+  app.get("*", serveStatic({ root: "public" }));
   return app;
 };
 
