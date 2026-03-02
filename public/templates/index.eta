@@ -7,25 +7,14 @@
 <body>
   <main>
     <div id="side-panel">
+
+
       <ul>
+        
         <li><a class="all" href="#">All</a></li>
-        <li><a href=../html_pages/grass.html>Grass</a></li>
-        <li><a href=../html_pages/poison.html>Poison</a></li>
-        <li><a href=../html_pages/fire.html>Fire</a></li>
-        <li><a href=../html_pages/flying.html>Flying</a></li>
-        <li><a href=../html_pages/water.html>Water</a></li>
-        <li><a href=../html_pages/bug.html>Bug</a></li>
-        <li><a href=../html_pages/normal.html>Normal</a></li>
-        <li><a href=../html_pages/electric.html>Electric</a></li>
-        <li><a href=../html_pages/ground.html>Ground</a></li>
-        <li><a href=../html_pages/fairy.html>Fairy</a></li>
-        <li><a href=../html_pages/fighting.html>Fighting</a></li>
-        <li><a href=../html_pages/psychic.html>Psychic</a></li>
-        <li><a href=../html_pages/rock.html>Rock</a></li>
-        <li><a href=../html_pages/steel.html>Steel</a></li>
-        <li><a href=../html_pages/ice.html>Ice</a></li>
-        <li><a href=../html_pages/ghost.html>Ghost</a></li>
-        <li><a href=../html_pages/dragon.html>Dragon</a></li>
+        <% it.pokiTypes.forEach(function(type){%>
+        <li><a class="<%=type%>" href="#"><%=type%></a></li>
+        <% }) %>
       </ul>
     </div>
     <div id="right-panel">
