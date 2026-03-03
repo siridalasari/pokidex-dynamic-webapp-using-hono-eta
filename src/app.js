@@ -10,6 +10,7 @@ export const createApp = (pokiesData) => {
     await next();
   });
   app.get("/", serveIndexPage);
+  app.get("/:type", serveIndexPage);
   app.get("*", serveStatic({root:'public'}));
   return app;
 };
@@ -26,9 +27,11 @@ const getPokiTypes = (pokiesData) => {
 
 
 const serveIndexPage = (c) => {
+  const type = c.req.param("type")
+  console.log({type})
   const pokiesData = c.get("pokiesData");
   const pokiTypes = getPokiTypes(pokiesData);
   const eta = new  Eta({views:"public/templates"});
-  const indexPage = eta.render("./index.eta",{pokiTypes});
+  const indexPage = eta.render("./index.eta",{pokiTypes,pokiesData, type});
   return c.html(indexPage);
 }
